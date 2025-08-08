@@ -59,14 +59,17 @@ nav ul li a:hover {
 .portfolio {
     text-align: center;
     padding: 50px 20px;
+    background: #000; /* warna hitam */
+    color: white; /* teks jadi putih agar terbaca */
 }
 
 .portfolio img {
-    max-width: 250px; /* diperkecil */
+    max-width: 250px;
     margin-top: 20px;
     border-radius: 10px;
     border: 3px solid #2196f3;
 }
+
 
 /* Produk */
 .products {
