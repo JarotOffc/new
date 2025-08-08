@@ -7,8 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #f0f8ff; /* biru muda */
     line-height: 1.6;
+    color: #333;
 }
 
 /* Navbar */
@@ -16,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #2196f3; /* biru cerah */
     color: white;
     padding: 10px 20px;
 }
@@ -35,6 +36,11 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .hamburger {
@@ -53,6 +59,7 @@ nav ul li a {
     max-width: 400px;
     margin-top: 20px;
     border-radius: 10px;
+    border: 3px solid #2196f3;
 }
 
 /* Produk */
@@ -67,10 +74,11 @@ nav ul li a {
 .product-card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
     padding: 15px;
     text-align: center;
     width: 250px;
+    border: 2px solid #2196f3;
 }
 
 .product-card img {
@@ -80,7 +88,7 @@ nav ul li a {
 
 /* Footer & Sosial Media */
 footer {
-    background: #222;
+    background: #1565c0; /* biru lebih gelap */
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -98,7 +106,7 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #ff6600;
+    color: #ffeb3b; /* kuning untuk hover */
 }
 
 /* Responsive */
@@ -109,7 +117,7 @@ footer {
 
     nav.active {
         display: block;
-        background: #333;
+        background: #2196f3;
         padding: 10px;
     }
 
