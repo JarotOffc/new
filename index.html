@@ -3,41 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store Dev - Home</title>
+    <title>My Store - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo-area">
-            <img src="https://img1.pixhost.to/images/7814/630179889_imgtmp.jpg" alt="Logo" class="logo">
-            <h1 class="brand"><span class="blue">STORE</span> DEV</h1>
-        </div>
-        <div class="header-right">
-            <button class="theme-toggle" id="themeToggle">☀️</button>
-            <button class="hamburger" id="hamburgerBtn">☰</button>
-        </div>
-    </header>
 
-    <!-- MENU -->
-    <nav class="menu" id="menu">
-        <a href="index.html">Home</a>
-        <a href="payment.html">Payment</a>
-        <a href="product.html">Product</a>
-        <a href="saluran.html">Saluran</a>
+<header>
+    <div class="logo">My Store</div>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
     </nav>
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="profile-img">
-            <img src="foto.jpg" alt="Foto Profil">
-        </div>
-        <h2 class="tagline">Halo, saya Oscar Dev</h2>
-        <p class="description">
-            Developer web & aplikasi, siap membuat solusi digital yang berkualitas.
-        </p>
-    </section>
+<section class="portfolio">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Here you can find my works and store products.</p>
+    <img src="images/portfolio.jpg" alt="Portfolio Image">
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <h3>Follow Me</h3>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2025 My Store. All rights reserved.</p>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>
