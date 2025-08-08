@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment - STORE DEV</title>
+    <title>Payment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,36 +13,29 @@
             <img src="https://img1.pixhost.to/images/7814/630179889_imgtmp.jpg" alt="Logo" class="logo">
             <h1 class="brand"><span class="blue">STORE</span> DEV</h1>
         </div>
-        <button class="theme-toggle" id="themeToggle">☀️</button>
+        <div class="header-right">
+            <button class="theme-toggle" id="themeToggle">☀️</button>
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+        </div>
     </header>
 
-    <!-- CONTENT -->
-    <section class="hero">
-        <h2 class="tagline">Metode Pembayaran</h2>
-        <p class="description">
-            Kami menerima berbagai metode pembayaran untuk kenyamanan Anda:
-        </p>
-        <ul style="list-style:none; padding:0;">
-            <li>💳 Kartu Kredit/Debit (Visa, MasterCard)</li>
-            <li>🏦 Transfer Bank</li>
-            <li>📱 E-Wallet (Dana, OVO, GoPay)</li>
-            <li>💵 COD (Bayar di Tempat)</li>
-        </ul>
-    </section>
-
     <!-- MENU -->
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <a href="payment.html">Payment</a>
         <a href="product.html">Product</a>
-        <a href="index.html">Home</a>
+        <a href="saluran.html">Saluran</a>
     </nav>
 
-    <script>
-        const toggle = document.getElementById('themeToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            toggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-        });
-    </script>
+    <!-- CONTENT -->
+    <div class="content">
+        <h2>Metode Pembayaran</h2>
+        <ul>
+            <li>Bank Transfer (BCA, BRI, Mandiri)</li>
+            <li>E-Wallet (OVO, Dana, GoPay, ShopeePay)</li>
+            <li>Kartu Kredit</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
