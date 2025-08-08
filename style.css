@@ -6,32 +6,19 @@
 }
 
 /* BODY */
-/* ========== GLOBAL STYLE ========== */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #f8f8f8;
     color: #333;
 }
 
-.dark-mode {
-    background: #121212;
-    color: #fff;
+/* DARK MODE */
+body.dark-mode {
+    background: #222;
+    color: #eee;
 }
 
-.dark-mode .menu {
-    background: #1e1e1e;
-}
-
-.dark-mode .menu a {
-    color: #fff;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* ========== HEADER ========== */
+/* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
@@ -42,8 +29,8 @@ a {
     height: 50px;
 }
 
-.dark-mode .header {
-    background: #1e1e1e;
+body.dark-mode .header {
+    background: #333;
 }
 
 .logo-area {
@@ -76,6 +63,7 @@ a {
     gap: 10px;
 }
 
+/* BUTTONS */
 .theme-toggle,
 .hamburger {
     background: none;
@@ -84,7 +72,7 @@ a {
     cursor: pointer;
 }
 
-/* ========== MENU ========== */
+/* MENU */
 .menu {
     background: #fff;
     display: flex;
@@ -94,11 +82,12 @@ a {
     padding: 12px;
 }
 
-.dark-mode .menu {
-    background: #1e1e1e;
+body.dark-mode .menu {
+    background: #333;
 }
 
 .menu a {
+    text-decoration: none;
     color: #00bcd4;
     font-weight: bold;
     transition: color 0.3s;
@@ -108,7 +97,7 @@ a {
     color: #007a89;
 }
 
-/* ========== HAMBURGER - MOBILE ========== */
+/* HAMBURGER MENU STYLE - MOBILE */
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -124,50 +113,59 @@ a {
     }
 }
 
-/* ========== HERO SECTION ========== */
+/* HERO */
 .hero {
     text-align: center;
     padding: 30px;
 }
 
 .profile-img img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid #00bcd4;
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
+    border: 3px solid #00bcd4;
+    box-shadow: 0 0 15px rgba(0,188,212,0.5);
 }
 
 .tagline {
-    font-size: 1.2em;
     margin-top: 15px;
+    font-size: 1.2em;
 }
 
 .title {
-    font-size: 1.5em;
-    margin-top: 5px;
+    font-size: 1.4em;
+    margin-top: 10px;
 }
 
 .description {
-    max-width: 600px;
-    margin: 15px auto;
-}
-/* Pastikan tombol di header bisa diklik */
-.header-right button {
-    position: relative;
-    z-index: 1000;
+    margin-top: 15px;
+    font-size: 0.95em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Pastikan menu muncul di atas konten lain saat terbuka */
-.menu.menu-open {
-    display: flex;
-    position: absolute;
-    top: 50px; /* pas di bawah header */
-    left: 0;
-    width: 100%;
-    background: inherit;
-    padding: 15px 0;
-    z-index: 999;
+/* CONTENT */
+.content {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
 }
 
+.content h2 {
+    margin-bottom: 15px;
+    color: #00bcd4;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content ul li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
