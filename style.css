@@ -119,12 +119,18 @@ footer {
 @media (max-width: 768px) {
     nav {
         display: none;
+        position: absolute; /* menimpa konten, bukan dorong */
+        top: 60px; /* tepat di bawah navbar */
+        right: 0;
+        background: #2196f3;
+        width: 200px;
+        padding: 10px;
+        border-radius: 0 0 0 10px;
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
     }
 
     nav.active {
         display: block;
-        background: #2196f3;
-        padding: 10px;
     }
 
     nav ul {
