@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo-area">
+            <img src="https://img1.pixhost.to/images/7814/630179889_imgtmp.jpg" alt="Logo" class="logo">
+            <h1 class="brand"><span class="blue">STORE</span> DEV</h1>
+        </div>
+        <button class="theme-toggle" id="themeToggle">☀️</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="profile-img">
+            <img src="foto.jpg" alt="Foto Profil">
+        </div>
+        <h2 class="tagline">Halo, saya Oscar Dev</h2>
+        <h3 class="title">
+            <span class="blue">Membuat</span> Solusi Digital
+            <span class="blue">Berkualitas</span>
+        </h3>
+        <p class="description">
+            Saya seorang developer yang berfokus pada pembuatan website, aplikasi, dan sistem yang handal.
+            Mengutamakan kualitas, keamanan, dan kenyamanan pengguna dalam setiap proyek.
+        </p>
+    </section>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="#">Payment</a>
+        <a href="#">Product</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <script>
+        // Dark Mode Toggle
+        const toggle = document.getElementById('themeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+        });
+    </script>
+</body>
+</html>
