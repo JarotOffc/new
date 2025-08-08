@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Oscar Dev</title>
+    <title>Home - STORE DEV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +21,7 @@
 
     <!-- MENU -->
     <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
         <a href="payment.html">Payment</a>
         <a href="product.html">Product</a>
         <a href="saluran.html">Saluran</a>
@@ -38,10 +39,21 @@
         </h3>
         <p class="description">
             Saya seorang developer yang berfokus pada pembuatan website, aplikasi, dan sistem yang handal.
-            Mengutamakan kualitas, keamanan, dan kenyamanan pengguna dalam setiap proyek.
         </p>
     </section>
 
-    <script src="script.js"></script>
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+        });
+        const hamburger = document.getElementById('hamburgerBtn');
+        const menu = document.getElementById('menu');
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('menu-open');
+        });
+    </script>
 </body>
 </html>
