@@ -153,3 +153,21 @@ a {
     max-width: 600px;
     margin: 15px auto;
 }
+/* Pastikan tombol di header bisa diklik */
+.header-right button {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Pastikan menu muncul di atas konten lain saat terbuka */
+.menu.menu-open {
+    display: flex;
+    position: absolute;
+    top: 50px; /* pas di bawah header */
+    left: 0;
+    width: 100%;
+    background: inherit;
+    padding: 15px 0;
+    z-index: 999;
+}
+
