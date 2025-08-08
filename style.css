@@ -1,4 +1,4 @@
-/* ====== BASIC RESET ====== */
+/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
@@ -8,112 +8,117 @@
 body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
-    color: #333;
-    transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
 }
 
-/* ====== DARK MODE ====== */
-body.dark-mode {
-    background: #121212;
-    color: #fff;
-}
-
-/* ====== HEADER ====== */
-.header {
+/* Navbar */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 16px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    height: 50px;
-    position: relative;
-    z-index: 1000;
-}
-
-body.dark-mode .header {
-    background: #1f1f1f;
-}
-
-.logo-area {
-    display: flex;
-    align-items: center;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
 }
 
 .logo {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 8px;
-    border: 2px solid #00bcd4;
-}
-
-.brand {
-    font-size: 1.1em;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.blue {
-    color: #00bcd4;
-}
-
-.header-right {
+nav ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.theme-toggle,
-.hamburger {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: inherit;
-}
-
-/* ====== MENU ====== */
-.menu {
-    display: flex;
-    justify-content: center;
     gap: 20px;
-    background: #fff;
-    border-top: 1px solid #ddd;
-    padding: 12px;
 }
 
-body.dark-mode .menu {
-    background: #1f1f1f;
-}
-
-.menu a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #00bcd4;
-    font-weight: bold;
 }
 
-.menu a:hover {
-    color: #007a89;
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
-/* ====== MOBILE MENU ====== */
+/* Portfolio */
+.portfolio {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.portfolio img {
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Produk */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer & Sosial Media */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .menu {
+    nav {
         display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        border-top: none;
-        z-index: 999;
     }
 
-    .menu.menu-open {
-        display: flex;
-        background: inherit;
-        padding: 15px 0;
+    nav.active {
+        display: block;
+        background: #333;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
