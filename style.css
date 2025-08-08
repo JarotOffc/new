@@ -1,24 +1,24 @@
-/* RESET */
+/* ====== BASIC RESET ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: Arial, sans-serif;
-    background: #f8f8f8;
+    background: #f4f4f4;
     color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* DARK MODE */
+/* ====== DARK MODE ====== */
 body.dark-mode {
-    background: #222;
-    color: #eee;
+    background: #121212;
+    color: #fff;
 }
 
-/* HEADER */
+/* ====== HEADER ====== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -27,10 +27,12 @@ body.dark-mode {
     background: #fff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     height: 50px;
+    position: relative;
+    z-index: 1000;
 }
 
 body.dark-mode .header {
-    background: #333;
+    background: #1f1f1f;
 }
 
 .logo-area {
@@ -49,7 +51,6 @@ body.dark-mode .header {
 
 .brand {
     font-size: 1.1em;
-    margin: 0;
     font-weight: bold;
 }
 
@@ -63,109 +64,56 @@ body.dark-mode .header {
     gap: 10px;
 }
 
-/* BUTTONS */
 .theme-toggle,
 .hamburger {
     background: none;
     border: none;
     font-size: 18px;
     cursor: pointer;
+    color: inherit;
 }
 
-/* MENU */
+/* ====== MENU ====== */
 .menu {
-    background: #fff;
     display: flex;
     justify-content: center;
     gap: 20px;
+    background: #fff;
     border-top: 1px solid #ddd;
     padding: 12px;
 }
 
 body.dark-mode .menu {
-    background: #333;
+    background: #1f1f1f;
 }
 
 .menu a {
     text-decoration: none;
     color: #00bcd4;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 .menu a:hover {
     color: #007a89;
 }
 
-/* HAMBURGER MENU STYLE - MOBILE */
+/* ====== MOBILE MENU ====== */
 @media (max-width: 768px) {
     .menu {
         display: none;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
         border-top: none;
-        padding: 10px;
+        z-index: 999;
     }
 
     .menu.menu-open {
         display: flex;
+        background: inherit;
+        padding: 15px 0;
     }
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 30px;
-}
-
-.profile-img img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00bcd4;
-    box-shadow: 0 0 15px rgba(0,188,212,0.5);
-}
-
-.tagline {
-    margin-top: 15px;
-    font-size: 1.2em;
-}
-
-.title {
-    font-size: 1.4em;
-    margin-top: 10px;
-}
-
-.description {
-    margin-top: 15px;
-    font-size: 0.95em;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* CONTENT */
-.content {
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
-}
-
-.content h2 {
-    margin-bottom: 15px;
-    color: #00bcd4;
-}
-
-.content ul {
-    list-style: none;
-}
-
-.content ul li {
-    background: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
