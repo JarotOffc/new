@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product - STORE DEV</title>
+    <title>Product</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,44 +13,30 @@
             <img src="https://img1.pixhost.to/images/7814/630179889_imgtmp.jpg" alt="Logo" class="logo">
             <h1 class="brand"><span class="blue">STORE</span> DEV</h1>
         </div>
-        <button class="theme-toggle" id="themeToggle">☀️</button>
+        <div class="header-right">
+            <button class="theme-toggle" id="themeToggle">☀️</button>
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+        </div>
     </header>
 
-    <!-- CONTENT -->
-    <section class="hero">
-        <h2 class="tagline">Daftar Produk</h2>
-        <p class="description">
-            Berikut adalah beberapa produk unggulan yang kami tawarkan:
-        </p>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; padding:20px;">
-            <div style="background:#fff; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                <h3>Produk 1</h3>
-                <p>Deskripsi singkat produk 1.</p>
-            </div>
-            <div style="background:#fff; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                <h3>Produk 2</h3>
-                <p>Deskripsi singkat produk 2.</p>
-            </div>
-            <div style="background:#fff; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-                <h3>Produk 3</h3>
-                <p>Deskripsi singkat produk 3.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- MENU -->
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <a href="payment.html">Payment</a>
         <a href="product.html">Product</a>
-        <a href="index.html">Home</a>
+        <a href="saluran.html">Saluran</a>
     </nav>
 
-    <script>
-        const toggle = document.getElementById('themeToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            toggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-        });
-    </script>
+    <!-- CONTENT -->
+    <div class="content">
+        <h2>Produk Kami</h2>
+        <ul>
+            <li>Website Company Profile</li>
+            <li>Aplikasi Android</li>
+            <li>Sistem POS</li>
+            <li>Landing Page</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
