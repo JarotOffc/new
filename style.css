@@ -20,11 +20,17 @@ header {
     background: #2196f3; /* biru cerah */
     color: white;
     padding: 10px 20px;
+    position: relative; /* memastikan posisi stabil */
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    flex-shrink: 0; /* mencegah logo mengecil atau bergerak */
+}
+
+nav {
+    transition: transform 0.3s ease; /* animasi hanya untuk menu */
 }
 
 nav ul {
@@ -56,7 +62,7 @@ nav ul li a:hover {
 }
 
 .portfolio img {
-    max-width: 250px;
+    max-width: 250px; /* diperkecil */
     margin-top: 20px;
     border-radius: 10px;
     border: 3px solid #2196f3;
@@ -82,13 +88,13 @@ nav ul li a:hover {
 }
 
 .product-card img {
-    max-width: 180px;
+    max-width: 180px; /* diperkecil */
     border-radius: 8px;
 }
 
 /* Footer & Sosial Media */
 footer {
-    background: #1565c0; /* biru lebih gelap */
+    background: #1565c0; /* biru gelap */
     color: white;
     text-align: center;
     padding: 20px 10px;
