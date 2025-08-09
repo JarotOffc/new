@@ -124,7 +124,7 @@ footer {
         position: absolute; /* menimpa konten, bukan dorong */
         top: 60px; /* tepat di bawah navbar */
         right: 0;
-        background: #2196f3;
+        background: #000;
         width: 200px;
         padding: 10px;
         border-radius: 0 0 0 10px;
