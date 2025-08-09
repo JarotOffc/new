@@ -47,7 +47,8 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: #00bfff;
     text-decoration: underline;
 }
@@ -67,48 +68,84 @@ nav ul li a:hover {
     color: #eee;
 }
 
-.portfolio img {
-    max-width: 250px;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: 3px solid #00bfff;
+/* Center header for store image and title */
+.center-header {
+    text-align: center;
+    margin: 40px auto 30px auto;
+}
+
+.center-header img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 15px;
+    background: #000;
+}
+
+.center-header h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #eee;
 }
 
 /* Produk */
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
 }
 
+/* Product card with flex layout */
 .product-card {
-    background: #1e1e1e;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #00bfff50;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
     padding: 15px;
-    text-align: center;
-    width: 250px;
-    border: 2px solid #00bfff;
-    color: #eee;
+    margin-bottom: 15px;
 }
 
 .product-card img {
-    max-width: 180px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     border-radius: 8px;
+    background: #000;
+}
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-info strong {
+    display: block;
+    font-size: 16px;
+    color: #eee;
+}
+
+.product-info small {
+    display: block;
+    color: #bbb;
+}
+
+.price {
+    color: #00bfff;
+    font-weight: 700;
+    margin-top: 5px;
 }
 
 .order-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #00bfff; /* biru neon */
-    color: #121212; /* teks gelap */
+    background-color: #00bfff;
+    color: #121212;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    padding: 8px 16px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 
 .order-btn:hover {
