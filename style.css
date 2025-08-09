@@ -99,6 +99,23 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
+.order-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00bfff; /* biru neon */
+    color: #121212; /* teks gelap */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #0099cc;
+    color: #fff;
+}
+
 /* Footer & Sosial Media */
 footer {
     background: #121212;
