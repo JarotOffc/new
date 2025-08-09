@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Oscar Dev - Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: #000;
+        color: #fff;
+        white-space: nowrap;
+        box-sizing: border-box;
+        margin-top: 20px;
+        border-radius: 8px;
+        padding: 10px 0;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .marquee-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 12s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -25,9 +55,15 @@
 </header>
 
 <section class="portfolio">
-    <img src="foto.jpg" alt="Portfolio Image">
+    <img src="foto.jpg" alt="Portfolio Image" />
     <h1>Welcome to Oscar Dev</h1>
-    <p>Halo, saya Oscar, seorang developer yang memiliki passion dalam membangun aplikasi dan sistem yang inovatif dan efektif. Saya memiliki pengalaman dalam mengembangkan berbagai jenis aplikasi, mulai dari web hingga mobile, dan memiliki kemampuan dalam menggunakan berbagai teknologi dan bahasa pemrograman.</p>
+    <p>
+      Halo, saya Oscar, seorang developer yang memiliki passion dalam membangun aplikasi dan sistem yang inovatif dan efektif. Saya memiliki pengalaman dalam mengembangkan berbagai jenis aplikasi, mulai dari web hingga mobile, dan memiliki kemampuan dalam menggunakan berbagai teknologi dan bahasa pemrograman.
+    </p>
+
+    <div class="marquee-container">
+      <p class="marquee-text">Halo saya Oscar Dev, saya adalah seorang developer</p>
+    </div>
 </section>
 
 <footer>
