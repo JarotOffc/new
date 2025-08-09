@@ -7,28 +7,142 @@
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
-  .channel {
-    margin-bottom: 30px;
-    text-align: center;
+  /* Styling menu dan hamburger */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
   }
-  .channel img {
-    max-width: 200px; /* samakan dengan logo utama */
-    width: 100%;
-    border-radius: 15px; /* samakan border-radius dengan logo utama */
-    margin-bottom: 20px; /* sedikit lebih besar margin biar rapi */
-}
-  .channel button {
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  nav {
+    transition: transform 0.3s ease;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    text-decoration: underline;
+  }
+  .hamburger {
     cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background: #000;
+      width: 200px;
+      padding: 10px;
+      border-radius: 0 0 0 10px;
+      box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+      flex-direction: column;
+      gap: 10px;
+    }
+    nav.active {
+      display: flex;
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
+  /* Card styling untuk saluran */
+  .channels-container {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .channel-card {
+    background-color: #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.2s ease;
+  }
+  .channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  }
+  .channel-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  .channel-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  .channel-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bbb;
+  }
+  .channel-card button {
     background-color: #2196f3;
     color: white;
     border: none;
-    padding: 10px 18px;
+    padding: 12px 24px;
     border-radius: 8px;
     font-weight: 700;
+    cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  .channel button:hover {
+  .channel-card button:hover {
     background-color: #0b7dda;
+  }
+
+  /* Footer dan sosial media */
+  footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+  }
+  .social-icons {
+    margin: 10px 0;
+  }
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .social-icons a:hover {
+    color: #ffeb3b;
   }
 </style>
 </head>
@@ -49,38 +163,34 @@
   </div>
 </header>
 
-<section class="portfolio" style="text-align:center; padding: 30px 20px;">
-  <img src="logo.jpg" alt="Logo Oscar Dev" style="max-width: 200px; width: 100%; border-radius: 15px; margin-bottom: 20px;" />
-  <h1>Saluran WhatsApp</h1>
-  <p>Ikuti saluran WhatsApp kami untuk mendapatkan informasi terbaru:</p>
-
-  <div class="channel">
-    <img src="logo1.jpg" alt="Logo Saluran 1" />
+<main class="channels-container">
+  <div class="channel-card">
+    <img src="foto.jpg" alt="Logo Saluran 1" />
     <h2>Oscar Multi Device</h2>
     <p>Platform untuk layanan seperti pembuatan bot, website, VPS, dan lainnya.</p>
-    <a href="https://whatsapp.com/channel/0029VaybYhxJuyAGHsDqiF1D" target="_blank">
+    <a href="https://whatsapp.com/channel/0029VaybYhxJuyAGHsDqiF1D" target="_blank" rel="noopener noreferrer">
       <button>Ikuti Saluran</button>
     </a>
   </div>
 
-  <div class="channel">
-    <img src="logo2.jpg" alt="Logo Saluran 2" />
+  <div class="channel-card">
+    <img src="foto.jpg" alt="Logo Saluran 2" />
     <h2>Oscar Multi Device (Saluran 2)</h2>
     <p>Platform untuk layanan seperti pembuatan bot, website, VPS, dan lainnya.</p>
-    <a href="https://whatsapp.com/channel/0029Vafxmss3wtb42PjN371r" target="_blank">
+    <a href="https://whatsapp.com/channel/0029Vafxmss3wtb42PjN371r" target="_blank" rel="noopener noreferrer">
       <button>Ikuti Saluran</button>
     </a>
   </div>
 
-  <div class="channel">
-    <img src="logo3.jpg" alt="Logo Saluran 3" />
+  <div class="channel-card">
+    <img src="foto.jpg" alt="Logo Saluran 3" />
     <h2>Sad Vibes</h2>
     <p>Saluran untuk berbagi cerita dan suasana hati.</p>
-    <a href="https://whatsapp.com/channel/0029Vb3LoQQGpLHKJWu1p92c" target="_blank">
+    <a href="https://whatsapp.com/channel/0029Vb3LoQQGpLHKJWu1p92c" target="_blank" rel="noopener noreferrer">
       <button>Ikuti Saluran</button>
     </a>
   </div>
-</section>
+</main>
 
 <footer>
   <h3>Follow Me</h3>
