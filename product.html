@@ -28,13 +28,13 @@
         <img src="panel.jpg" alt="Product 1" />
         <h3>Product 1</h3>
         <p>$10</p>
-        <button class="order-btn">Order</button>
+        <button class="order-btn" data-product="Product 1">Order</button>
     </div>
     <div class="product-card">
         <img src="panel.jpg" alt="Product 2" />
         <h3>Product 2</h3>
         <p>$15</p>
-        <button class="order-btn">Order</button>
+        <button class="order-btn" data-product="Product 2">Order</button>
     </div>
 </section>
 
@@ -48,6 +48,19 @@
 
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+    });
+
+    // Script tombol order ke WA
+    const orderButtons = document.querySelectorAll('.order-btn');
+    const waNumber = '6285850539404';
+
+    orderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const productName = btn.getAttribute('data-product');
+            const message = `Halo, saya ingin memesan produk: ${productName}`;
+            const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        });
     });
 </script>
 
