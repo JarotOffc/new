@@ -1,51 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saluran</title>
+    <title>Oscar Dev - Saluran WhatsApp</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo-area">
-            <img src="https://img1.pixhost.to/images/7814/630179889_imgtmp.jpg" alt="Logo" class="logo">
-            <h1 class="brand"><span class="blue">STORE</span> DEV</h1>
-        </div>
-        <div class="header-right">
-            <button class="theme-toggle" id="themeToggle">☀️</button>
-            <button class="hamburger" id="hamburgerBtn">☰</button>
-        </div>
-    </header>
 
-    <nav class="menu" id="menu">
-        <a href="index.html">Home</a>
-        <a href="payment.html">Payment</a>
-        <a href="product.html">Product</a>
-        <a href="saluran.html">Saluran</a>
-    </nav>
-
-    <section style="padding:20px;">
-        <h2>Saluran Resmi</h2>
+<header>
+    <div class="logo">Oscar Dev</div>
+    <nav id="nav-menu">
         <ul>
-            <li>Telegram: @oscardev</li>
-            <li>WhatsApp: 08xxxxxxxxxx</li>
-            <li>Email: oscar@example.com</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="saluran.html" class="active">Saluran</a></li>
         </ul>
-    </section>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
 
-    <script>
-        const toggle = document.getElementById('themeToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            toggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-        });
+<section class="portfolio">
+    <h1>Saluran WhatsApp</h1>
+    <p>Ikuti saluran WhatsApp kami untuk mendapatkan informasi terbaru:</p>
+    <div class="channel">
+        <h2>Oscar Multi Device</h2>
+        <p>Platform untuk layanan seperti pembuatan bot, website, VPS, dan lainnya.</p>
+        <a href="https://whatsapp.com/channel/0029VaybYhxJuyAGHsDqiF1D" target="_blank">
+            <button>Ikuti Saluran</button>
+        </a>
+    </div>
+    <div class="channel">
+        <h2>Oscar Multi Device (Saluran 2)</h2>
+        <p>Platform untuk layanan seperti pembuatan bot, website, VPS, dan lainnya.</p>
+        <a href="https://whatsapp.com/channel/0029Vafxmss3wtb42PjN371r" target="_blank">
+            <button>Ikuti Saluran</button>
+        </a>
+    </div>
+    <div class="channel">
+        <h2>Sad Vibes</h2>
+        <p>Saluran untuk berbagi cerita dan suasana hati.</p>
+        <a href="https://whatsapp.com/channel/0029Vb3LoQQGpLHKJWu1p92c" target="_blank">
+            <button>Ikuti Saluran</button>
+        </a>
+    </div>
+</section>
 
-        const hamburger = document.getElementById('hamburgerBtn');
-        const menu = document.getElementById('menu');
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('menu-open');
-        });
-    </script>
+<footer>
+    <h3>Follow Me</h3>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/jarotr_"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jarotr_"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/jarotr_"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/jarotr_"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2025 Oscar Dev. All rights reserved.</p>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>
