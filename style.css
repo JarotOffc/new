@@ -96,8 +96,8 @@ nav ul li a:hover {
 
 /* Footer & Sosial Media */
 footer {
-    background: #1565c0; /* biru gelap */
-    color: white;
+    background: #000; /* biru gelap */
+    color: #fff;
     text-align: center;
     padding: 20px 10px;
 }
