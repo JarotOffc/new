@@ -17,8 +17,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2196f3; /* biru cerah */
-    color: white;
+    background: #000; /* biru cerah */
+    color: #fff;
     padding: 10px 20px;
     position: relative; /* memastikan posisi stabil */
 }
