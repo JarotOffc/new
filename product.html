@@ -1,67 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Store - Products</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OSCARDEV Store - Products</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
 <header>
-    <div class="logo">My Store</div>
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="payment.html">Payment</a></li>
-        </ul>
-    </nav>
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-    </div>
+  <div class="logo">OSCARDEV</div>
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" class="active">Product</a></li>
+      <li><a href="payment.html">Payment</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
 </header>
 
+<section class="portfolio">
+  <div class="center-header">
+    <img src="https://qu.ax/DRFgY.jpg" alt="OSCAR DEV STORE" />
+    <h1>OSCARDEV</h1>
+  </div>
+</section>
+
 <section class="products">
-    <div class="product-card">
-        <img src="panel.jpg" alt="Product 1" />
-        <h3>Product 1</h3>
-        <p>$10</p>
-        <button class="order-btn" data-product="Product 1">Order</button>
-    </div>
-    <div class="product-card">
-        <img src="panel.jpg" alt="Product 2" />
-        <h3>Product 2</h3>
-        <p>$15</p>
-        <button class="order-btn" data-product="Product 2">Order</button>
-    </div>
+  <div class="product-card">
+    <img src="https://qu.ax/BxbvH.jpg" alt="Panel Public" />
+    <h3>PANEL PUBLIC</h3>
+    <p>Oscar Panel</p>
+    <button class="order-btn" data-product="PANEL PUBLIC">Order</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://qu.ax/BxbvH.jpg" alt="Panel Private" />
+    <h3>PANEL PRIVATE</h3>
+    <p>Oscar Panel</p>
+    <button class="order-btn" data-product="PANEL PRIVATE">Order</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://qu.ax/DRFgY.jpg" alt="Script Bot Cpanel" />
+    <h3>SCRIPT BOT CPANEL</h3>
+    <p>Sc Bot Cpanel</p>
+    <p class="price">Rp 50.000</p>
+    <button class="order-btn" data-product="SCRIPT BOT CPANEL">Order</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://qu.ax/lKVJn.jpg" alt="Script Bot Oscar" />
+    <h3>SCRIPT BOT OSCAR</h3>
+    <p>Sc Bot WA Oscar</p>
+    <p class="price">Rp 100.000</p>
+    <button class="order-btn" data-product="SCRIPT BOT OSCAR">Order</button>
+  </div>
 </section>
 
 <footer>
-    <p>© 2025 My Store. All rights reserved.</p>
+  <p>© 2025 OSCARDEV Store. All rights reserved.</p>
 </footer>
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
 
-    // Script tombol order ke WA
-    const orderButtons = document.querySelectorAll('.order-btn');
-    const waNumber = '6285850539404';
+  // Script tombol order ke WA
+  const orderButtons = document.querySelectorAll('.order-btn');
+  const waNumber = '6285850539404';
 
-    orderButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const productName = btn.getAttribute('data-product');
-            const message = `Halo, saya ingin memesan produk: ${productName}`;
-            const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        });
-    });
+  orderButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const productName = btn.getAttribute('data-product');
+      const message = `Halo, saya ingin memesan produk: ${productName}`;
+      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
+  });
 </script>
 
 </body>
