@@ -7,40 +7,50 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-      .typing-container {
+      /* Container dan style teks berjalan */
+      .marquee-container {
         width: 100%;
+        overflow: hidden;
         background-color: #000;
         color: #fff;
-        border-radius: 8px;
-        padding: 15px 20px;
-        font-weight: bold;
-        font-size: 18px;
-        white-space: normal;
-        overflow: hidden;
+        white-space: nowrap;
         box-sizing: border-box;
         margin-top: 20px;
-        font-family: monospace, monospace;
-        line-height: 1.5;
+        border-radius: 8px;
+        padding: 10px 0;
+        font-weight: bold;
+        font-size: 18px;
       }
 
-      /* Optional blinking cursor */
-      .typing-cursor {
+      .marquee-text {
         display: inline-block;
-        width: 3px;
-        background-color: #fff;
-        animation: blink 1s steps(2, start) infinite;
-        margin-left: 5px;
-        vertical-align: bottom;
+        padding-left: 100%;
+        animation: marquee 12s linear infinite;
       }
 
-      @keyframes blink {
-        0%, 50% {
-          opacity: 1;
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
         }
-        50.01%, 100% {
-          opacity: 0;
+        100% {
+          transform: translateX(-100%);
         }
       }
+
+      /* Styling typing effect container agar bergeser ke kiri */
+      .typing-container {
+        padding-left: 10px; /* geser isi ke kiri supaya rapi */
+        font-weight: bold;
+        font-size: 18px;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: #000;
+        margin-top: 20px;
+        box-sizing: border-box;
+        height: 24px; /* tinggi container sesuai teks */
+      }
     </style>
 </head>
 <body>
@@ -64,9 +74,8 @@
     <img src="foto.jpg" alt="Portfolio Image" />
     <h1>Welcome to Oscar Dev</h1>
 
-    <div class="typing-container" id="typing">
-        <span id="typed-text"></span><span class="typing-cursor"></span>
-    </div>
+    <!-- Ganti marquee dengan typing effect -->
+    <div class="typing-container" id="typing"></div>
 </section>
 
 <footer>
@@ -88,21 +97,19 @@
         navMenu.classList.toggle('active');
     });
 
-    // Typing effect script
-    const text = "Halo, saya Oscar, seorang developer yang memiliki passion dalam membangun aplikasi dan sistem yang inovatif dan efektif. Saya memiliki pengalaman dalam mengembangkan berbagai jenis aplikasi, mulai dari web hingga mobile. Saya juga memiliki kemampuan dalam menggunakan berbagai teknologi dan bahasa pemrograman.";
-    const typedTextSpan = document.getElementById('typed-text');
-    let charIndex = 0;
-    const typingDelay = 40; // ms per karakter
+    // Typing effect
+    const text = "Halo, saya Oscar, seorang developer yang memiliki passion dalam membangun aplikasi dan sistem yang inovatif dan efektif. Saya memiliki pengalaman dalam mengembangkan berbagai jenis aplikasi, mulai dari web hingga mobile, dan memiliki kemampuan dalam menggunakan berbagai teknologi dan bahasa pemrograman.";
+    const typingContainer = document.getElementById('typing');
+    let index = 0;
 
-    function type() {
-        if (charIndex < text.length) {
-            typedTextSpan.textContent += text.charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-        }
-    }
-
-    type();
+    function typing() {
+        if (index < text.length) {
+            typingContainer.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typing, 50);
+        }
+    }
+    typing();
 </script>
 
 </body>
