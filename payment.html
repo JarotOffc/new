@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Store - Payment</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Store - Payment</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
 <header>
-    <div class="logo">My Store</div>
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="payment.html">Payment</a></li>
-        </ul>
-    </nav>
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-    </div>
+  <div class="logo">My Store</div>
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="payment.html" class="active">Payment</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
 </header>
 
-<section class="portfolio">
-    <h1>Payment Information</h1>
-    <p>You can make payments via:</p>
-    <ul>
-        <li>Bank Transfer</li>
-        <li>PayPal</li>
-        <li>Credit Card</li>
-    </ul>
+<section class="portfolio" style="text-align:center; padding: 40px 20px;">
+  <h1>Payment Information</h1>
+  <p>Please scan the QRIS code below to make your payment:</p>
+  <img src="qris.jpg" alt="QRIS Payment" style="max-width: 300px; width: 100%; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.3);" />
 </section>
 
 <footer>
-    <p>© 2025 My Store. All rights reserved.</p>
+  <p>© 2025 My Store. All rights reserved.</p>
 </footer>
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
 </script>
 
 </body>
